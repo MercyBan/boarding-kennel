@@ -28,7 +28,7 @@ public class Dog {
         //    parameters in brackets
 
     public Dog(String breed, int age, String name, String allergies,
-               int amountOfFood, boolean isFed, KennelSize kennelSize){
+               int amountOfFood, int amountFed, boolean isFed, KennelSize kennelSize){
             this.breed = breed;
             this.age = age;
             this.allergies = allergies;

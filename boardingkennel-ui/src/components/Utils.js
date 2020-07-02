@@ -15,5 +15,22 @@ export default class Utils {
           console.error('Error:', error);
         })
     }
+  
+  static get(path) {
+    return (fetch(path, {
+      method: 'GET' ,
+      headers: {
+        'Content-Type' : 'application/json',
+      }
+
+    })
+      
+      .then( response => response.json ())
+      .catch ((error) => {
+        console.error('Error:', error);
+
+      })
+      );
+    }
   }
   

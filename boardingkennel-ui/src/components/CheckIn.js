@@ -105,7 +105,7 @@ class CheckIn extends Component {
             </Form.Control>
           </Form.Group>
           <Form.Group>
-            <Form.Label>Has your  dog been feed today?</Form.Label>
+            <Form.Label>Has your  dog been fed today?</Form.Label>
             <div key={'hasBeenFed'} className="mb-2">
               <Form.Check inline onChange={this.onRadioChange}
                 name='isFed'
