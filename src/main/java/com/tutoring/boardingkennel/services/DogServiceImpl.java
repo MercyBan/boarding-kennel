@@ -1,13 +1,15 @@
 package com.tutoring.boardingkennel.services;
 
 import com.tutoring.boardingkennel.models.Dog;
+import com.tutoring.boardingkennel.models.KennelSize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.tutoring.boardingkennel.repositories.DogRepo;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
-@Service("dogService")
+@Service
 @Transactional
 public class DogServiceImpl implements DogService {
 
@@ -23,5 +25,10 @@ public class DogServiceImpl implements DogService {
     @Override
     public Dog findByName(String name) {
         return null;
+    }
+
+    @Override
+    public List<Dog> findByKennelSize(KennelSize size) {
+        return dogRepo.findAllByKennelSize(size);
     }
 }

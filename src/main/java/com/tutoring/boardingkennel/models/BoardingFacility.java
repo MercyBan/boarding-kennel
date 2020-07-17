@@ -1,9 +1,18 @@
 package com.tutoring.boardingkennel.models;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class BoardingFacility {
 
-    private String name;
+
+    @Id
+    @GeneratedValue
     private Long id;
+    private String name;
     private int numberOfSmallKennels;
     private int numberOfMediumKennels;
     private int numberOfLargeKennels;

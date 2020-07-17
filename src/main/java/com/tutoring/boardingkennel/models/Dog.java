@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class Dog {
     @Id
     @GeneratedValue
-        private long id;
+    private long id;
         private String breed;
         private int age;
         private String name;

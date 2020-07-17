@@ -16,7 +16,7 @@ public class BoardingFacilityController {
     BoardingFacilityServiceImpl boardingFacilityService;
 
 
-    @GetMapping(path = "/.", consumes = "application/json" , produces = "application/json")
+    @GetMapping(path = "/availability", consumes = "application/json" , produces = "application/json")
     public ResponseEntity<Map<String, Integer>> getTotalNUmberOfKennels() {
         Map<String, Integer> availability = boardingFacilityService.getAvailability();
 
