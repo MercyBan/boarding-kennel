@@ -7,7 +7,7 @@ import{BrowserRouter as Router, Route} from 'react-router-dom'
 import Home from './components/Home';
 import CheckIn from './components/CheckIn';
 import Availability from './components/Availability';
-
+import CheckOut from "./components/CheckOut";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
             <Navbar.Brand href="/">Boarding Kennel</Navbar.Brand>
             <Nav className="mr-auto">
               <Nav.Link href="/checkin">Check-in Dog</Nav.Link>
+              <Nav.Link href="/checkout">Check-Out Dog</Nav.Link>
               <Nav.Link href="/availability">Availability </Nav.Link>
 
             </Nav>
@@ -25,6 +26,7 @@ function App() {
           <div className="component">
             <Route path="/" exact component={Home} />
             <Route path="/checkin" component={CheckIn} />
+            <Route path="/checkout" component={CheckOut} />
             <Route path="/availability" component={Availability} />
           </div>
         </div>
