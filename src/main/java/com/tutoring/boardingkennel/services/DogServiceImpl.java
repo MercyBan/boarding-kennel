@@ -31,4 +31,9 @@ public class DogServiceImpl implements DogService {
     public List<Dog> findByKennelSize(KennelSize size) {
         return dogRepo.findAllByKennelSize(size);
     }
+
+    @Override
+    public List<Dog> getAllDogs() {
+        return dogRepo.findAll();
+    }
 }
