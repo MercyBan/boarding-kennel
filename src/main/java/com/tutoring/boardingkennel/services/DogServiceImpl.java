@@ -24,16 +24,23 @@ public class DogServiceImpl implements DogService {
 
     @Override
     public Dog findByName(String name) {
+
         return null;
     }
 
     @Override
     public List<Dog> findByKennelSize(KennelSize size) {
+
         return dogRepo.findAllByKennelSize(size);
     }
 
     @Override
     public List<Dog> getAllDogs() {
         return dogRepo.findAll();
+    }
+
+    @Override
+    public void delete(Dog dog) {
+     dogRepo.delete(dog);
     }
 }

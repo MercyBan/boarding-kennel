@@ -12,4 +12,7 @@ public interface DogService {
     List<Dog> findByKennelSize(KennelSize size);
 
     List<Dog> getAllDogs();
+
+    void delete(Dog dog);
+
 }

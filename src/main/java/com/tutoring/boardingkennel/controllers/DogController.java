@@ -25,8 +25,16 @@ public class DogController {
     }
 
     @GetMapping(path = "/dogs", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<List<Dog>> getAllDogs(){
+    public ResponseEntity<List<Dog>> getAllDogs() {
 
         return new ResponseEntity(dogService.getAllDogs(), HttpStatus.OK);
+    }
+
+    @PostMapping(path = "/checkOutDog", consumes = "application/json", produces = "application/json")
+
+    public ResponseEntity<List<Dog>> checkOutDog(@RequestBody Dog dog) {
+        dogService.delete(dog);
+        List <Dog> dogs=dogService.getAllDogs();
+        return new ResponseEntity(dogs, HttpStatus.CREATED);
     }
 }

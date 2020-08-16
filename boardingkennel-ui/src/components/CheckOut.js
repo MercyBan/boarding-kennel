@@ -19,7 +19,15 @@ class CheckOut extends Component{
         });
     }
     checkOut = dog => {
-        console.log(dog)
+        const postData ={
+            id: dog.id 
+        }
+        Utils.post("/checkOutDog", postData).then(data=>{
+            this.setState({
+                boardingDogs:data
+            })
+        })
+        
     }
     render() {
         return (
